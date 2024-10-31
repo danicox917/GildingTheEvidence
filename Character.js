@@ -164,7 +164,7 @@ function formHandler() {
   cashStart = (defaultSet.money*role.money*gen.money).toFixed(2);
   lost = 0;
   weight = (defaultSet.weight*gen.weight*role.weight);
-  motif="<img src='/images/Motif2.png' class='motif'></img>"
+  motif="<img src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/Motif2.png' class='motif'></img>"
 
   introParagraph = motif+ "Good afternoon " +
   title +" "+lname+ "! Today is April 5, 1885, a lovely Sunday in "+ locphrase +" New York City. <br> It's going to be a big day so you better get started. <br> You're "+ gen.preface + " a " + role.name + " and today you have to "+task+". There's three things you need to do: " +subTasks+" You have $" + cashStart+" to get everything on your list. <br> It's a crazy world out there and anything could happen, so you want to be sure you have <a href='#perspos'>everything you need</a> before you go. But you can only carry about " + weight + " pounds, including the things you need to pick up while you're out.<br> Grab your bag before you go: <br>"
