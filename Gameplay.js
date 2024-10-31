@@ -35,7 +35,7 @@ function refresh (){//include this somewhere else when done testing, probably st
 let seconds = 0;
 let secString = "";
 let progressBar = "";
-let thingHappening = "<img class='cartoon' src='/images/nothing.png'></img>";
+let thingHappening = "<img class='cartoon' src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/nothing.png'></img>";
 let choice1Active = "";
 let choice2Active = "";
 let stop = 0;
@@ -44,7 +44,7 @@ function timeProgress(){
   secString = seconds.toString();
   progressBar="images/progBar/prog"+secString+".png";
   console.log(location2);
-  if (seconds < 6 && thingHappening == "<img class='cartoon' src='/images/nothing.png'></img>"){
+  if (seconds < 6 && thingHappening == "<img class='cartoon' src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/nothing.png'></img>"){
     console.log(progressBar);
     seconds += 1;
     document.getElementById("secs").innerHTML = "<img class='cartoon' style='max-width:100%' src='"+progressBar+"'></img>";
@@ -54,7 +54,7 @@ function timeProgress(){
     document.getElementById("street").style.display = "block";
     document.getElementById("shop").style.display = "none";
     consequence();
-  } else if (thingHappening !== "<img class='cartoon' src='/images/nothing.png'></img>") {
+  } else if (thingHappening !== "<img class='cartoon' src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/nothing.png'></img>") {
     console.log("???");
     document.getElementById("statsBox").innerHTML = "Tasks: <p>You need to "+subTasks+"<br></p>Weight Available: <p>"+(weight-charWeight).toFixed(2)+" lbs<br></p>Money Available: <p>$"+(cashStart-lost).toFixed(2)+"</p>Your Things: <p>"+thingsList+"</p>";
     document.getElementById("choice1").style.display = "block";
@@ -77,7 +77,7 @@ var location1;
 var cancel;
 function startCounter(loc){
   let probArray = [];
-  thingHappening = "<img class='cartoon' src='/images/nothing.png'></img>";
+  thingHappening = "<img class='cartoon' src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/nothing.png'></img>";
   seconds = 0;
   loca = eval(loc);
   document.getElementById("countStarter").style.display = "none";
@@ -100,7 +100,7 @@ function contTime(){
   document.getElementById("choice1").style.display = "none";
   document.getElementById("choice2").style.display = "none";
   result = "";
-  thingHappening = "<img class='cartoon' src='/images/nothing.png'></img>";
+  thingHappening = "<img class='cartoon' src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/nothing.png'></img>";
   choice1Active = "";
   choice2Active = "";
   document.getElementById("event").style.display = "block";
@@ -147,18 +147,18 @@ function weightedAction(){
   result = functionArray[index];
   console.log(index+" index");
   console.log(result);
-  if (result == "The assailant gets ahold of your pockets and you lose some things, but you get away safely.<br><img class='cartoon'src='/images/robber.png'></img>" || result == "You bolt and the assailant manages to grab you as you leave, taking some things as you pull away.<br><img class='cartoon'src='/images/thief.png'></img>"|| result == "You drop some things and they roll away.<br><img class='cartoon'src='/images/fall.png'></img>"){
+  if (result == "The assailant gets ahold of your pockets and you lose some things, but you get away safely.<br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/robber.png'></img>" || result == "You bolt and the assailant manages to grab you as you leave, taking some things as you pull away.<br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/thief.png'></img>"|| result == "You drop some things and they roll away.<br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/fall.png'></img>"){
     loss();
     rep = "You lost "+change;
   } else if (result =="They aren't available for deliveries today, sorry."||result=="You return to the last shop you visited, shopkeeper isn't comfortable holding on to your things. Doesn't want to be responsible if something happens, you understand."){
     rep = "This is awkward. I guess you can't finish your shopping today. Refresh to restart the game."
-  } else if (result == "They have agreed to deliver some stuff to your home. What are neighbors for? <br><img class='cartoon'src='/images/florist.png'></img>"){
+  } else if (result == "They have agreed to deliver some stuff to your home. What are neighbors for? <br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/florist.png'></img>"){
     deliverStuff();
     rep = "They delivered the "+change+ " to your house.";
-  } else if (result == "You leave some things at a nearby shop to lighten your load, and promise to return for them later. <br><img class='cartoon'src='/images/florist.png'></img>"){
+  } else if (result == "You leave some things at a nearby shop to lighten your load, and promise to return for them later. <br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/florist.png'></img>"){
     deliverStuff();
     rep = "You left the "+change+ " behind the counter.";
-  } else if (result =="You successfully slip the pocketbook out of their pocket.<br><img class='cartoon'src='/images/rich.png'></img>"|| result =="You get some money, lucky you.<br><img class='cartoon'src='/images/rich.png'></img>"|| result =="She thanks you and gives you some money for your trouble.<br><img class='cartoon'src='/images/oldwoman.png'></img>"){
+  } else if (result =="You successfully slip the pocketbook out of their pocket.<br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/rich.png'></img>"|| result =="You get some money, lucky you.<br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/rich.png'></img>"|| result =="She thanks you and gives you some money for your trouble.<br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/oldwoman.png'></img>"){
     windfall();
     rep = "You gained "+change;
   } else {
@@ -231,8 +231,8 @@ function choiceOption(x){
   else if(x == "Ask for their help"){
     probGood = 5;
     probBad = 5;
-    goodOption = "They have agreed to deliver some stuff to your home. What are neighbors for? <br><img class='cartoon'src='/images/florist.png'></img>";
-    badOption = "They really don't have the time today. Sorry friend, maybe next time.<br><img class='cartoon'src='/images/sadShopkeeper.png'></img>";
+    goodOption = "They have agreed to deliver some stuff to your home. What are neighbors for? <br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/florist.png'></img>";
+    badOption = "They really don't have the time today. Sorry friend, maybe next time.<br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/sadShopkeeper.png'></img>";
     if (location1 == events.street && bagForm.includes(clippings)) {
       probGood =  8;
       probBad = 2;
@@ -253,8 +253,8 @@ function choiceOption(x){
   else if (x == "Try and slip the pocket book out of their pocket"){
     probGood = 4;
     probBad = 6;
-    goodOption = "You successfully slip the pocketbook out of their pocket.<br><img class='cartoon'src='/images/rich.png'></img>";
-    badOption = "They catch you, and you make yourself scarce before they can call the cops.<br><img class='cartoon'src='/images/cop.png'></img>";
+    goodOption = "You successfully slip the pocketbook out of their pocket.<br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/rich.png'></img>";
+    badOption = "They catch you, and you make yourself scarce before they can call the cops.<br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/cop.png'></img>";
     if (location1 == bagForm.includes(handkerchief)) {
       probGood =  6;
       probBad = 4;
@@ -267,8 +267,8 @@ function choiceOption(x){
   else if (x == "See if a shopkeeper can deliver some items home for you"){
     probGood = 5;
     probBad = 5;
-    goodOption = "They have agreed to deliver some stuff to your home. What are neighbors for? <br><img class='cartoon'src='/images/florist.png'></img>";
-    badOption = "They aren't available for deliveries today, sorry.<br><img class='cartoon'src='/images/sadShopkeeper.png'></img>";
+    goodOption = "They have agreed to deliver some stuff to your home. What are neighbors for? <br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/florist.png'></img>";
+    badOption = "They aren't available for deliveries today, sorry.<br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/sadShopkeeper.png'></img>";
     if (location1 == events.street && bagForm.includes(clippings)) {
       probGood =  8;
       probBad = 2;
@@ -289,8 +289,8 @@ function choiceOption(x){
   else if (x == "Leave some things behind to pick up another day"){
     probGood = 7;
     probBad = 3;
-    goodOption = "You leave some things at a nearby shop to lighten your load, and promise to return for them later. <br><img class='cartoon'src='/images/florist.png'></img>";
-    badOption = "You return to the last shop you visited, shopkeeper isn't comfortable holding on to your things. Doesn't want to be responsible if something happens, you understand.<br><img class='cartoon'src='/images/sadShopkeeper.png'></img>";
+    goodOption = "You leave some things at a nearby shop to lighten your load, and promise to return for them later. <br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/florist.png'></img>";
+    badOption = "You return to the last shop you visited, shopkeeper isn't comfortable holding on to your things. Doesn't want to be responsible if something happens, you understand.<br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/sadShopkeeper.png'></img>";
     if (demo=="abb"){
       probBad+=2;
     } else if (demo=="imm"){
@@ -301,8 +301,8 @@ function choiceOption(x){
   else if (x == "Try and pickpocket someone nearby"){
     probGood = 4;
     probBad = 6;
-    goodOption = "You successfully slip the pocketbook out of their pocket.<br><img class='cartoon'src='/images/rich.png'></img>";
-    badOption = "They catch you, and you make yourself scarce before they can call the cops. <br><img class='cartoon'src='/images/cop.png'></img>";
+    goodOption = "You successfully slip the pocketbook out of their pocket.<br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/rich.png'></img>";
+    badOption = "They catch you, and you make yourself scarce before they can call the cops. <br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/cop.png'></img>";
     if (location1 == bagForm.includes(handkerchief)) {
       probGood =  6;
       probBad = 4;
@@ -321,7 +321,7 @@ function choiceOption(x){
     probGood = 0;
     probBad = 1;
     goodOption = "";
-    badOption = "I guess you have to try again tomorrow. Refresh the page to start again.<br><img class='cartoon'src='/images/sadShopkeeper.png'></img>";
+    badOption = "I guess you have to try again tomorrow. Refresh the page to start again.<br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/sadShopkeeper.png'></img>";
     if (location1 == bagForm.includes(handkerchief)) {
       probGood =  6;
       probBad = 4;
@@ -331,8 +331,8 @@ function choiceOption(x){
   else if (x == "Fight them off"){
     probGood = 5;
     probBad = 5;
-    goodOption = "You manage to fight them off long enough to get away, and you bolt without losing any money or items.<br><img class='cartoon'src='/images/thief.png'></img>";
-    badOption = "The assailant gets ahold of your pockets and you lose some things, but you get away safely.<br><img class='cartoon'src='/images/robber.png'></img>";
+    goodOption = "You manage to fight them off long enough to get away, and you bolt without losing any money or items.<br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/thief.png'></img>";
+    badOption = "The assailant gets ahold of your pockets and you lose some things, but you get away safely.<br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/robber.png'></img>";
     if (location1 == events.street && bagForm.includes(gun)) {
       probGood =  8;
       probBad = 2;
@@ -345,22 +345,22 @@ function choiceOption(x){
   else if (x == "Run"){
     probGood = 7;
     probBad = 3;
-    goodOption = "You bolt and the assailant doesn't catch you. <br><img class='cartoon'src='/images/thief.png'></img>";
-    badOption = "You bolt and the assailant manages to grab you as you leave, taking some things as you pull away.<br><img class='cartoon'src='/images/thief.png'></img>";
+    goodOption = "You bolt and the assailant doesn't catch you. <br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/thief.png'></img>";
+    badOption = "You bolt and the assailant manages to grab you as you leave, taking some things as you pull away.<br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/thief.png'></img>";
     finish(x);
   }
   else if (x == "Pick it up"){
     probGood = 9;
     probBad = 1;
-    goodOption = "You get some money, lucky you.<br><img class='cartoon'src='/images/rich.png'></img>";
-    badOption = "As soon as you pick it up you can tell the paper feels odd. You look closer and see that the money is counterfeit.<br><img class='cartoon'src='/images/sadShopkeeper.png'></img>";
+    goodOption = "You get some money, lucky you.<br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/rich.png'></img>";
+    badOption = "As soon as you pick it up you can tell the paper feels odd. You look closer and see that the money is counterfeit.<br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/sadShopkeeper.png'></img>";
     finish(x);
   }
   else if (x == "Help her"){
     probGood = 3;
     probBad = 7;
-    goodOption = "She thanks you and gives you some money for your trouble.<br><img class='cartoon'src='/images/oldwoman.png'></img>";
-    badOption = "She thanks you and you go on your way.<br><img class='cartoon'src='/images/oldwoman.png'></img>";
+    goodOption = "She thanks you and gives you some money for your trouble.<br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/oldwoman.png'></img>";
+    badOption = "She thanks you and you go on your way.<br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/oldwoman.png'></img>";
     if (demo=="abb"){
       probBad+=2;
     } else if (demo=="imm"){
@@ -371,15 +371,15 @@ function choiceOption(x){
   else if (x == "Try to catch yourself"){
     probGood = 4;
     probBad = 6;
-    goodOption = "You stop your fall with only your pride harmed.<br><img class='cartoon'src='/images/fall.png'></img>";
-    badOption = "You drop some things and they roll away.<br><img class='cartoon'src='/images/fall.png'></img>";
+    goodOption = "You stop your fall with only your pride harmed.<br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/fall.png'></img>";
+    badOption = "You drop some things and they roll away.<br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/fall.png'></img>";
     finish(x);
   }
   else if (x == "Just let yourself fall"){
     probGood = 5;
     probBad = 5;
-    goodOption = "Your body breaks the fall for your things and you don't lose anything.<br><img class='cartoon'src='/images/fall.png'></img>";
-    badOption = "You drop some things and they roll away.<br><img class='cartoon'src='/images/fall.png'></img>";
+    goodOption = "Your body breaks the fall for your things and you don't lose anything.<br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/fall.png'></img>";
+    badOption = "You drop some things and they roll away.<br><img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/fall.png'></img>";
     finish(x);
   }
   else {
