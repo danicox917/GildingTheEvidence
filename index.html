@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js">
+
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js">
+
+	</script>
+
+
+	<title>Gilding the Evidence</title>
+</head>
+
+<body>
+	<!-- Navigation Bar -->
+	<nav class="navbar navbar-expand-md">
+		<a class="navbar-brand" href="/index.html">
+			<div class="align-content-center"><img src="/images/Motif1.jpeg" style="height: 1.5em; position:absolute;z-index: -1; margin-left:2.1em; margin-right:auto; display: block;"></img>
+				<!--Insert SVG here if you want one, maybe a little knife?-->Gilding the Evidence</div>
+		</a>
+		<!-- MAKE SURE THIS TOGGLE SHIT WORKS-->
+		<button class="navbar-toggler hamburger" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span><div class="navbar-toggler-icon"></div><br>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end"  id="navbarNav">
+    <ul class="navbar-nav" >
+      <li class="nav-item active">
+        <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/research.html">The Research</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about.html">About</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- Body-->
+  <div class="border" id="topOfPage"></div>
+<div class="container">
+  <div class="row" >
+    <div class="col-lg-12 col-md-12 col-sm-12" >
+      <!-- onclick="testStats();refresh()"-->
+      <div id="characterButton">
+        <h1>Gilding the Evidence</h1>
+        <h2>What do the objects you carry with you have to do with true crime stories?</h2>
+        <div class="block row align-text-center">
+      <p><img src='/images/Motif2.png' class="motif"></img>What do you carry in your pockets, or your purse, or your backpack everyday? What are the essentials before you leave your house, like your keys, wallet, phone? Does it change depending on where you're going? When was the last time you recorded what those things were? The things carried with a person say a lot about who they are, what kinds of things they do, and how they fit into a society.</p>
+        <p><img style="float: right; width: 15vw;" class="figure-img img-fluid textImage" src='/images/MemoBook.png' alt="a small memo book with ivory pencil">People rarely record these types of items because they're such a mundane part of their everyday lives. One of the few instances where they are written down is when someone is the victim or perpetrator of a crime, especially in true crime reporting, where writers seek to bring their stories to life with juicy details.</p>
+          <p>Because the Gilded Age, roughly 1870-1900, was known for its abundance of dramatic, sensational newspaper reporting, it serves as an ideal period for studying how people perceived these objects and the people who carried them, especially in the context of crime and victimhood. This period is also known for the shifting roles of immigrants, racial minorities, and women. Possessions are particularly important sources of information about these lives, as they tend to have fewer surviving written records than other groups.</p>
+          <p><img style="float: left; width: 15vw;" class="figure-img img-fluid textImage" src='/images/Calling%20Card%20Case.png' alt="a tortiseshell calling card case">Take a look at examples of these objects from museum collections to better understand how they reflected who these people were, and who other people thought they were. Then step into the shoes of someone that lived in the year 1885, and see how their identities and the choices they made affected how their daily activities played out. </p>
+          </div>
+      </div>
+      
+      <!--Intro Sequence-->
+      <div id="introPortion" class="container-fluid gameplay">
+        <div class="row">
+          <div class="block col-lg-12 col-md-12 col-sm-12">
+        <div id="introParagraph"></div>
+        <div id="alert"></div>
+        </div>
+        </div>
+        <div class="row objectPicker justify-content-center">
+        <div class="block col-lg-4 col-md-4 col-sm-6 hidden" id="bag1"><input class="blah" type="radio" onclick="bagFunction(bag1)" id="callingCard" name="bag" value="callingCard"><label for="callingCard">Social<div class="obj"  id="obj1"></div></label></div>
+            <div class="block col-lg-4 col-md-4 col-sm-6 hidden" id="bag2"><input class="blah" type="radio" id="memo" name="bag" value="memo" onclick="bagFunction(bag2)"><label for="memo">Prepared<div class="obj"  id="obj2"></div></label></div>
+            <div class="block col-lg-4 col-md-4 col-sm-6 hidden" id="bag3"><input  class="blah" onclick="bagFunction(bag3)" type="radio" id="handkerchief" name="bag" value="handkerchief"><label for="handkerchief">Feisty<div class="obj"   id="obj3"></div></label></div>
+            <div class="block col-lg-4 col-md-4 col-sm-6 hidden" id="bag4"><input  class="blah" type="radio" onclick="bagFunction(bag4)" id="gun" name="bag" value="gun"><label for="gun">Cultured<div class="obj"   id="obj4"></div></label></div>
+            <div class="block col-lg-4 col-md-4 col-sm-6 hidden" id="bag5"><input class="blah" type="radio" onclick="bagFunction(bag5)" id="keys" name="bag" value="keys"><label for="keys">All Business<div class="obj"  id="obj5"></div></label></div>
+            <div class="block col-lg-4 col-md-4 col-sm-6 hidden" id="bag6"><input class="blah" type="radio" id="clippings" onclick="bagFunction(bag6)" name="bag" value="clippings"><label for="clippings">Watchful<div class="obj" id="obj6"></div></label></div>
+            <div class="block col-lg-4 col-md-4 col-sm-6 hidden" id="bag7"><input class="blah" type="radio" id="ring" name="bag" value="ring" onclick="bagFunction(bag7)"><label for="ring">Relaxed<div class="obj"  id="obj7"></div></label></div>
+            <div class="block col-lg-4 col-md-4 col-sm-6 hidden" id="bag8"><input class="blah" type="radio" id="watch" name="bag" value="watch" onclick="bagFunction(bag8)"><label for="watch">Care Free<div class="obj" id="obj8"></div></label></div>
+        </div>
+            <div class="row justify-content-center">
+              <div class="block hidden" id="bagContents"></div>
+            <a href="#topOfPage"><button type="button" class="hidden"  id="bagSubmit"  onclick="startGame();">Submit</button></a>
+        </div>
+</div>
+    
+          <!--Gameplay-->
+        <div id="GameArea" class="container-fluid gameplay"><!--Move this div-->
+        <div class="row align-items-center">
+          <div class="col-lg-4 col-md-4 col-sm-12">
+            <div id="charSprite"></div>
+            <div>
+              <div id="statsBox"></div>
+            </div>
+          </div>
+          <div class="block align-self-stretch col-lg-8 col-md-8 col-sm-12">
+        <!--Out on the street-->
+        <div id="street">
+        <button type="button" id="countStarter" onclick="startCounter(events.street)">Start</button>
+        <div style="min-height: 50px; padding:0px; border-style:solid; border-color:var(--accent)" id="secs"></div>
+        <div id="event"></div>
+        <div id="outcome"></div>
+        <div class="row">
+        <button type='button' onclick="choiceOption(choice1Active)" class="hidden" id="choice1" ></button>
+        <button type='button' onclick="choiceOption(choice2Active)"class="hidden" id="choice2"></button>
+        </div>
+        <div><button type="button" id="recount" class="hidden" onclick="contTime()">Continue</button></div>
+        <div id="enterText" class="hidden">You've reached the door of the shop. Are you ready to go in?<br><img class='cartoon' src='/images/store.jpeg'></img></div>
+        <div><button type="button" id="enter" class="hidden" onclick="shop(places[stop])">Enter</button></div>
+        <div id="homeText" class="hidden">You made it back home. Do you have your keys?<br><img class='cartoon' src='/images/door.png'></img></div>
+        <div><button type="button" id="yesKeys" class="hidden" onclick="atHome()">Of course I do, let's go in.</button></div>
+        <div><button type="button" id="noKeys" class="hidden" onclick="keysYesNo()">Maybe I should knock?</button></div>
+        <div id="doorAnswer" class="hidden"></div>
+        <div><button type="button" id="enterHome" class="hidden" onclick="atHome()">Go Inside</button></div>
+        <div id="exitText" class="hidden">You finish browsing, pay the merchant, and exit back out onto the street. <br><img class='cartoon' src='/images/store.jpeg'></img></div>
+        <div><button type="button" id="exit" class="hidden" onclick="startCounter(events.street)">Exit</button></div>
+        </div>
+        <!--In the shop-->
+        <div id="shop" class="hidden">
+        <div id="welcome"></div>
+        <div id="shopDesc"></div>
+        <div class="cartoon" id="shopkeeper"></div>
+        <div id="shopQuest"></div>
+        <div class="row">
+        <button type='button' onclick="backToStreet()"  id="store1" >Pay the merchant and be on your way</button>
+        <button type='button' onclick="storeWander()" id="store2">Wander around the store a bit</button>
+        </div>
+        </div>
+        </div>
+    </div></div><!--Move it here-->
+    </div>
+    </div>
+  
+
+      <!--<h1>The game changes based on the choices you make, and is different every time you play. Keep these factors in mind:</h1>
+        <h2>Did you have enough money to get everything you needed?</h2>
+        <h2>Did certain things happen more or less often when you played as different people?</h2>
+        <h2>Did the things you carried affect what happened to you?</h2>-->
+  <h2>How to Play the Game</h2>
+        <div class="block row align-text-center">
+          <p><b>CONTENT WARNING: This site contains non-graphic depictions of weapons, drug use, and physical violence. Younger visitors and individuals sensitive to these themes should exercise discretion.</b></p>
+          <ol>
+            <li>Start by picking out your character. Your gender, ethnicity, background, and locale determines your role in society, which determines your goals and the resources that you have to accomplish them.</li>
+            <li class="blorg"><img style="float: right; width: 15vw;" class="figure-img img-fluid textImage" src='/images/bag4.png' alt="a blue, pink, and white beaded bag with a small notebook, pistol, and pocket watch in it">Pick out the things you take with you on your errands. The character you are playing as determines which items are available to you. The bag of things you pick affects how other people perceive your character. You can either click on the name of the item or <a href="#perspos">scroll below to learn more about these items</a> and get helpful hints about how they affect what happen to you in the game. Scrolling away from the game to learn more will not affect your progress.</li>
+            <li>Get started on your errands. As you walk through the street and into different shops, you will encounter a variety of people and scenarios and choose how you will respond to them. The events are picked randomly, and you may get the same event more than once in a row. How frequently each event occurs and how your choices pan out vary depending on what character you play as and what objects you have with you. </li>
+            <li class="blorg"><img style="float: right; width: 15vw;" class="figure-img img-fluid textImage" src='/images/keys.png' alt="iron key on a chain">Once you make it home, see how successful you were in your goals. You can play as many times as you'd like and compare how different choices lead to different outcomes. You can scroll below to learn more about the world these characters lived in by reading about <a href="#gilded">the Gilded Age</a>, <a href="#crimejournal">true crime and sensational journalism</a>, and the <a href="#immragen">changing experiences of immigrants, racial minorities, and women</a>.</li>
+          </ol>
+          <p>All images include alternative text descriptions for use with screen readers. Click below to start playing:</p>
+      <a href="#topOfPage"><button id="charButton" data-toggle="modal" data-target="#demo-modal-1" >Choose your Character</button></a></div>
+      <img style="max-width: 100%; display: block; margin-left: auto;margin-right: auto; margin-top: 8px;"src="/images/Border%202.jpeg"></img>
+      <h1>Learn More</h1>
+      <div class="row justify-content-around">
+      <a href="#gilded"><button>The Gilded Age</button></a>
+      <a href="#perspos"><button href="">Personal Possessions</button></a>
+      <a href="#crimejournal"><button href="">Crime and Journalism</button></a>
+      <a href="#immragen"><button href="">Immigration, Race, and Gender</button></a>
+      </div>
+      <h2 id="gilded">The Gilded Age</h2>
+      <div class="block">
+        <p><figure style="float: left; width: 20vw;" class="figure"><img class="figure-img img-fluid textImage" style="width: 40vw;" alt="A brown hardcover book with gold embossed text that reads 'The Gilded Age, a Tale of Today.'" src="https://images.nypl.org/index.php?id=5160015&t=w"><figcaption class="figure-caption footnote" style="width: 20vw;">First edition of <em>The Gilded Age: A Tale of Today</em>. New York Public Library.</figcaption></figure>The Gilded Age is named after the satirical novel <em>The Gilded Age: A Tale of Today</em>, co-written by Charles Dudley Warner and Mark Twain in 1873. The book drew attention to the corruption, excess, and individualism that they saw as defining their time, and historians in the early twentieth century retroactively applied their title to the last few decades of the nineteenth century. The term "gilded" referred to the excessive displays of wealth by the rich and famous which covered up deeper societal problems.</p>
+        <p>Historians debate exactly what time period should be considered the Gilded Age, some using the end of the Civil War in 1865 as a starting point and others using the end of Reconstruction in 1877. The Spanish-American War in 1898 is sometimes used to mark the end of the period, and sometimes it's the end of the century in 1900. Scholars often study the Gilded Age alongside the Progressive Era that followed it, which featured greater efforts to reform some of the corruption and inequality that plagued the Gilded Age.</p>
+        <p><figure style="float: right; width: 40vw;" class="figure"><img class="figure-img img-fluid textImage" style="width: 40vw;" alt="Black and white photo of three men around a desk with various telegraph equipment." src="https://tile.loc.gov/storage-services/service/pnp/ppmsca/37700/37707v.jpg"><figcaption class="figure-caption footnote" style="width: 40vw;">The White House Telegraph Office in 1902 during the Theodore Roosevelt administration. Library of Congress.</figcaption></figure>The last few decades of the nineteenth century saw dramatic changes in how Americans lived. The United States experienced a rapid period of urbanization, with three quarters of the population living in rural areas in 1870, two thirds in 1900, and by 1920 more Americans lived in cities than outside of them for the first time. This was mostly concentrated in the industrialized Northeast where nearly two thirds of people lived in cities by 1900, compared to around 40% in the West and 18% in the South.</p>
+        <p>This period also featured an explosion of new technology that affected everything from agriculture and communication, to transportation and manufacturing. This led to an increase in the production of <a href="#crimejournal">affordable newspapers and magazines</a>, and made <a href="#perspos">consumer products, including luxury goods</a>, available to more people at all levels of society.</p>
+        <p>Of course, not everyone experienced the Gilded Age in the same way. What is referred to as the Gilded Age for America as a whole is sometimes called "The Tragic Era" by scholars of African American history, as progress made during Reconstruction started to unravel. <a href= "#immragen">Women, minorities, and immigrants</a> in particular filled new roles in their communities in both positive and negative ways.</p>
+        <a  href="#topOfPage" ><button>Back to Top</button></a>
+        <hr>
+        <p class="footnote">For more information, see:</p>
+        <p class="footnote">Nichols, Christopher M., and Nancy C. Unger, eds. <em>A Companion to the Gilded Age and Progressive Era.</em> Hoboken, NJ: John Wiley & Sons, 2017.</p>
+        <p class="footnote">Image Credits: </p>
+        <p class="footnote">Clinedinst, Barnett Mcfee. <em>Telegraph Office, Executive Building.</em> Washington D.C, ca. 1902. Photograph.<a href="https://www.loc.gov/item/2013651481/"> https://www.loc.gov/item/2013651481/.</a></p>
+        <p class="footnote">Henry W. and Albert A. Berg Collection of English and American Literature, The New York Public Library. "The Gilded Age." New York Public Library Digital Collections. Accessed March 13, 2022. <a href="https://digitalcollections.nypl.org/items/252dd9c0-1b4e-0132-ffac-58d385a7b928">https://digitalcollections.nypl.org/items/252dd9c0-1b4e-0132-ffac-58d385a7b928</a></p>
+      </div>
+<img style="max-width: 100%; display: block; margin-left: auto;margin-right: auto; margin-top: 8px;"src="/images/Border%202.jpeg"></img>
+      <h2 id="perspos">Personal Possessions</h2>
+      <div class="block">
+        <p><figure style="float: right; width: 40vw;" class="figure"><img class="figure-img img-fluid textImage" style="width: 40vw;" alt="Black and white photo of department store counters." src="https://tile.loc.gov/storage-services/service/pnp/det/4a20000/4a20000/4a20700/4a20753v.jpg"><figcaption class="figure-caption footnote" style="width: 40vw;">Traub Brothers Department Store in Detroit, Michigan, c. 1900. Library of Congress.</figcaption></figure>The Gilded Age marked a new frontier in manufacturing, selling, shopping for, and paying for things. For the first time, a certain level of luxury and goods were available to people at nearly all levels of the social ladder. Labor was cheaper due to the massive waves of new immigrants, goods were cheaper to make and distribute due to innovations in manufacturing, transportation, and communication, and the lack of military conflict allowed people to focus their money and attention in new materialistic directions.</p>
+        <p>People rarely record the things they carry with them because they're such a mundane part of their routine. These overlooked details usually only become worthy of writing down when something out of the ordinary happens to someone, which most often means becoming involved in a crime. Whether victim or perpetrator, or somewhere in between, sensationalist journalists of the Gilded Age used these details to add depth to their accounts of true crime, which allowed readers to draw conclusions about the people involved in the story.</p>
+        <p>This game features some of the personal effects that most commonly appear in newspaper coverage of true crime. Look at each object to learn more about its history and connotations and how it affects the game. You can use the buttons below the image of each item to see its entry in the collection it comes from, or navigate back to the top of the page. Look at the <a href="#crimejournal">Crime and Journalism</a> section to also see some examples of Gilded Age crime reporting that mention some of these items.</p>
+        <div class="row justify-content-around" style="padding: 5px;">
+      <a href="#pp1"><button>Calling Cards</button></a>
+      <a href="#pp2"><button>Memorandum Books</button></a>
+      <a href="#pp3"><button>Handkerchiefs</button></a>
+      <a href="#pp4"><button>Pistols and Revolvers</button></a></div><div class="row justify-content-around" style="padding: 5px;">
+      <a href="#pp5"><button>Knives</button></a>
+      <a href="#pp6"><button>Keys</button></a>
+      <a href="#pp7"><button>Newspaper Clippings</button></a>
+      <a href="#pp8"><button>Rings</button></a>
+      <a href="#pp9"><button>Pocket Watches</button></a>
+      </div>
+      </div>
+      <div class="block">
+        <h3 class="highlight" id="pp1">Calling Cards</h3>
+        <div class="row align-items-center">
+      <div class=" col-lg-5 col-md-6 col-sm-12"><img class="figure-img img-fluid objectImage" src='/images/Calling%20Card%20Case.png' alt="a tortiseshell calling card case"><p class="figure-caption footnote" style="width: 100%;">Tortoiseshell calling card case, c. 1840-1890. National Museum of American History.</p>
+      <a target="_blank" href="http://n2t.net/ark:/65665/ng49ca746a1-9038-704b-e053-15f76fa0b4fa" ><button>Smithsonian</button></a>
+    <a  href="#topOfPage" ><button>Back to Top</button></a></div>
+  <div class="col-lg-7 col-md-6 col-sm-12">
+    <p>Similar in style to a business card, calling cards started to be used in Western society in the eighteenth century. People would print their name and sometimes their address on a small card and could give it to a new acquaintance so that they could pay them a visit. One could also bring their cards when calling on a friend's home, either giving it to a servant to announce their visit or leaving it at the door if the friend wasn't home.</p>
+    <p>During the Gilded Age these were associated with both men and women, predominately white Americans, and reflected their roles as active and social community members.</p>
+    <h4>The Game</h4>
+    <p>If you were carrying a calling card, that meant your neighbors could expect to receive visits from you and you might receive visits from them in return. If they see you as polite, respectable, and social, your neighbors might be more willing to help you and do you favors.</p>
+    <hr>
+    <p class="footnote">For more information, see:</p>
+    <p class="footnote">Mayor, A. Hyatt. “Old Calling Cards.” <em>The Metropolitan Museum of Art Bulletin</em> 2, no. 2 (1943): 93–98. <a href="https://doi.org/10.2307/3257136">https://doi.org/10.2307/3257136</a>.
+</p>
+  </div></div>
+</div>
+    <div class="block">
+      <h3 class="highlight" id="pp2">Memorandum Book and Pencil</h3>
+        <div class="row align-items-center">
+<div class=" col-lg-5 col-md-6 col-sm-12"><img class="figure-img img-fluid objectImage" src='/images/MemoBook.png' alt="a small memo book with ivory pencil"><p class="figure-caption footnote" style="width: 100%;">Memorandum Book, 1870. National Museum of American History.</p>
+<a href="https://americanhistory.si.edu/collections/search/object/nmah_319389" target="_blank"><button>Smithsonian</button></a>
+    <a  href="#topOfPage" ><button>Back to Top</button></a></div>
+  <div class="col-lg-7 col-md-6 col-sm-12">
+    <p>It started to become common in the late eighteenth century for printers and stationary shops to sell small pocket "memorandum books," essentially a small notebook, in which people could record personal thoughts and reminders, business ledgers, or take out a page to leave a note for someone else.</p>
+    <p>Many men, particularly white men, were recorded with these kinds of notebooks in their possession during this period. Indeed, these notebooks were often marketed to men specifically so that they could record important business notes on the go. As many people became <a href="#gilded">more focused on business and industry</a>, practical and portable objects like these became a symbol of their role in the public sphere.</p>
+    <h4>The Game</h4>
+    <p>The ability to leave notes lets a memorandum book double as a sort of informal <a href="#pp1">calling card</a>. You could leave your name and address with a shopkeeper, for instance, which they could use to deliver purchases to your home.</p>
+    <hr>
+        <p class="footnote">For more information, see:</p>
+    <p class="footnote">Colclough, Stephen. “Pocket Books and Portable Writing: The Pocket Memorandum Book in Eighteenth-Century England and Wales.” <em>The Yearbook of English Studies</em> 45 (2015): 159–77. <a href="https://doi.org/10.5699/yearenglstud.45.2015.0159">https://doi.org/10.5699/yearenglstud.45.2015.0159</a>.</p>
+  </div></div>
+</div>
+  <div class="block">
+      <h3 class="highlight" id="pp3">Handkerchiefs</h3>
+        <div class="row align-items-center">
+     <div class=" col-lg-5 col-md-6 col-sm-12"><img class="figure-img img-fluid objectImage" src='/images/handkerchief.png' alt="a white lacy handkerchief"><p class="figure-caption footnote" style="width: 100%;">Handkerchief, fourth quarter of the nineteenth century. Metropolitan Museum of Art.</p><a href="https://www.metmuseum.org/art/collection/search/157631" target="_blank"><button>Met Museum</button></a>
+    <a  href="#topOfPage" ><button>Back to Top</button></a></div>
+  <div class="col-lg-7 col-md-6 col-sm-12">
+    <p>Handkerchiefs have been a part of the American material world since the beginning of the Colonial Period. They were usually made of silk, cotton, or linen, and could be embroidered, printed on, or trimmed with lace. They served the same function as modern facial tissues, generally cleaning up small messes.</p>
+    <p>Handkerchiefs were carried by men, women and children at all social levels. They were usually inexpensive and sold by the dozen, and shirts often came with specific handkerchief pockets. They could be plain and simple, or dainty and ornate.</p>
+    <h4>The Game</h4>
+    <p>These can be a symbol of refinement, or a practical item for cleaning or picking things up. Whether people see you as elegant and dainty or if you're more nimble grabbing things, it might make it easier to take things you're not supposed to.</p>
+    <hr>
+        <p class="footnote">For more information, see:</p>
+    <p class="footnote">Clark, Raymond B. “Historical Handkerchiefs.” <em>New York History</em> 36, no. 2 (1955): 189–96.<a href="http://www.jstor.org/stable/23153624">http://www.jstor.org/stable/23153624</a>.</p>
+    <p class="footnote">Montgomery Ward. <em>Montgomery Ward & Co. Catalogue and Buyers’ Guide 1895.</em> Skyhorse Pub., 2008.
+</p>
+  </div></div>
+</div>
+    <div class="block">
+      <h3 class="highlight" id="pp4">Pistols and Revolvers</h3>
+        <div class="row align-items-center">
+     <div class=" col-lg-5 col-md-6 col-sm-12"><img class="figure-img img-fluid objectImage" src='/images/pistol.png' alt="a revolver with reliefs of lizards on the handle"><p class="figure-caption footnote" style="width: 100%;">Smith and Wesson Revolver, 1881–1902. Metropolitan Museum of Art.</p><a href="https://www.metmuseum.org/art/collection/search/24968" target="_blank"><button>Met Museum</button></a>
+    <a  href="#topOfPage" ><button>Back to Top</button></a></div>
+  <div class="col-lg-7 col-md-6 col-sm-12">
+    <p>Though firearm ownership was deeply entrenched in American culture long before the Second Amendment was added to the Constitution, gun culture began to take on deeper roots in the social consciousness following the Civil War. The emergence of rifle clubs, militias, and cultural depictions of the West being "tamed" with the aid of sharp shooters made pistols and revolvers an important element of Gilded Age material culture.</p>
+    <p>Like with other violent weapons such as knives, firearms were most commonly associated with men in depictions of crime during the Gilded Age. Gun carriers in newspaper reports were also much more often white Americans than a racial minority or an immigrant.</p>
+    <h4>The Game</h4>
+    <p>If someone sees that you are carrying a firearm, they probably think that you are anticipating trouble or seeking it out. Depending on who you are, people will probably assume which one it is and either mistrust or target you.</p>
+    <hr>
+        <p class="footnote">For more information, see:</p>
+    <p class="footnote">Cramer, Clayton E. <em>Lock, Stock, and Barrel: the Origins of American Gun Culture.</em> Santa Barbara: ABC-CLIO, 2018.
+</p>
+  </div></div>
+</div>
+    <div class="block">
+      <h3 class="highlight" id="pp5">Knives</h3>
+        <div class="row align-items-center">
+     <div class="col-lg-5 col-md-6 col-sm-12"><img class="figure-img img-fluid objectImage" src='/images/knife.png' alt="a folding pocket knife"><p class="figure-caption footnote" style="width: 100%;">Folding Knife, c. 1885-1888. National Museum of American History.</p><a href="https://americanhistory.si.edu/collections/search/object/nmah_319974" target="_blank"><button>Smithsonian</button></a>
+    <a  href="#topOfPage" ><button>Back to Top</button></a></div>
+  <div class="col-lg-7 col-md-6 col-sm-12">
+    <p>People have been carrying sharpened blades since well before recorded history, with portable folding knives starting to become widely available in England during the Industrial Revolution. A knife can cover a wide range of shapes and purposes, from a tool used in manual labor to a weapon used to attack or defend.</p>
+    <p>Like with firearms, knives in newspaper accounts of crime were more often associated with men, as women were less often associated with violence in general. </p>
+    <h4>The Game</h4><p>Depending on the situation and who you are, having a knife could suggest to others that you're a hard worker with tools to get a job done, or that you're ready to grapple with violence. Like the <a href="#pp4">pistol</a>, it might make people mistrust you, or target you for a crime.</p>
+    <hr>
+        <p class="footnote">For more information, see:</p>
+    <p class="footnote">Moore, Simon. <em>Penknives and Other Folding Knives</em>. Risborough, Buckinghamshire: Shire Publications, 2008.
+
+</p>
+  </div></div>
+</div>
+    <div class="block">
+      <h3 class="highlight" id="pp6">Keys</h3>
+        <div class="row align-items-center">
+     <div class=" col-lg-5 col-md-6 col-sm-12"><img class="figure-img img-fluid objectImage" src='/images/keys.png' alt="iron key on a chain"><p class="figure-caption footnote" style="width: 100%;">Hunneman Fire Engine House Keys, 19th century. National Museum of American History.</p><a href="https://americanhistory.si.edu/collections/search/object/nmah_1378628" target="_blank"><button>Smithsonian</button></a>
+    <a  href="#topOfPage" ><button>Back to Top</button></a></div>
+  <div class="col-lg-7 col-md-6 col-sm-12">
+    <p>Keys are both very practical and very symbolic objects. They grant access to a space, and represent trust and authority over a certain domain.</p>
+    <p>Both men and women were depicted with keys during the Gilded Age, though historically women were more commonly associated with keys, as the "keyholders" of the home and the domestic sphere in general. The term "chetalaine" during the eighteenth and nineteenth centuries was used to both refer to the mistresses of an important house, and to the elaborate and decorative belt hooks they wore that would hold keys and other small accessories.</p>
+    <h4>The Game</h4>
+    <p>Regardless of what walk of life you're from, you still need keys to get into your house or place of business.</p>
+    <hr>
+        <p class="footnote">For more information, see:</p>
+    <p class="footnote">Cummins, Genevieve E., and Nerylla D. Taunton. <em>Chatelaines: Utilities to Glorious Extravagance</em>. Woodbridge: Antique Collectors Club, 1994.
+</p>
+  </div></div>
+</div>
+    <div class="block">
+      <h3 class="highlight" id="pp7">Newspaper Clippings</h3>
+      <div class="row align-items-center">
+     <div class=" col-lg-5 col-md-6 col-sm-12 "><img class="figure-img img-fluid objectImage" src='/images/clipping.png' style="max-height:70vh; float: center" alt="a newspaper clipping describing the presidential campaign of Grover Cleveland"><p class="figure-caption footnote" style="width: 100%;">Newspaper Clipping, 1888. National Museum of American History.</p><a href="https://americanhistory.si.edu/collections/search/object/nmah_520330" target="_blank"><button>Smithsonian</button></a>
+    <a  href="#topOfPage" ><button>Back to Top</button></a></div>  
+  <div class="col-lg-7 col-md-6 col-sm-12">
+    <p>Though newspapers often print on cheap and easily disposable paper by design, allowing them to print more frequently and abundantly, people have always preserved pieces that were important to them. Sometimes they are articles personally related to them, like a wedding or birth announcement, or it's just a piece they would want to reread later. While some of these articles wind up in scrapbooks, others were carried loose or tucked into notebooks.</p>
+    <p>Both men and women would sometimes carry newspaper clippings with them. In newspaper depictions, these were usually well-to-do people of good social standing, usually white Americans or more respected immigrants like Germans. Someone who read and collected items from the newspaper likely had the leisure time to do so, and therefore probably was financially stable and somewhat educated.</p>
+    <h4>The Game</h4>
+    <p>Someone with a certain degree of leisure time and education would probably seem more respectable and trustworthy. That might encourage people to do them favors.</p>
+    <hr>
+        <p class="footnote">For more information, see:</p>
+    <p class="footnote">Ritzenthaler, Mary Lynn. “Preserving Newspaper Clippings.” <em>Prologue Magazine</em>, Spring 2016.<a href="https://www.archives.gov/publications/prologue/2016/spring/preserve-clippings.html">https://www.archives.gov/publications/prologue/2016/spring/preserve-clippings.html</a>.
+
+</p>
+  </div></div>
+</div>
+    <div class="block">
+      <h3 class="highlight" id="pp8">Rings</h3>
+        <div class="row align-items-center">
+     <div class=" col-lg-5 col-md-6 col-sm-12"><img class="figure-img img-fluid objectImage" src='/images/ring.png' alt='a diamond wedding ring'><p class="figure-caption footnote" style="width: 100%;">Varina Davis' Wedding Ring, c. 1850-1880. National Museum of American History.</p><a href="https://americanhistory.si.edu/collections/search/object/nmah_1436565" target="_blank"><button>Smithsonian</button></a>
+    <a  href="#topOfPage" ><button>Back to Top</button></a></div>
+  <div class="col-lg-7 col-md-6 col-sm-12">
+    <p>Like with many other consumer goods, <a href="#gilded">increased industrialization and efficiency</a> in the jewelry industry allowed more people to be able to afford decorative pieces, partially contributing to the "gilding" that defined the culture of the period. Diamonds and silver became more popular with improvements in mining technology, and designs mirrored the Art Nouveau style that permeated visual culture throughout the Western world.</p>
+    <p>As one might expect, rings were most often associated with women. In newspaper articles, such decorative items were an important part of establishing the femininity of the subject and their association with beautiful, domestic comforts. White American women were depicted with these kinds of objects much more often than African American or immigrant women, implying something both about their higher economic status and about how society saw the femininity of marginalized women.</p>
+    <h4>The Game</h4>
+    <p>In any time period, flashy jewelry can make you a target for theives. Watch your back!</p>
+    <hr>
+        <p class="footnote">For more information, see:</p>
+    <p class="footnote">Wees, Beth Carver. “Nineteenth-Century American Jewelry.” In <em>Heilbrunn Timeline of Art History</em>. New York: The Metropolitan Museum of Art, October 2004. <a href="http://www.metmuseum.org/toah/hd/ajew/hd_ajew.htm">http://www.metmuseum.org/toah/hd/ajew/hd_ajew.htm</a>.
+</p>
+  </div></div>
+</div>
+    <div class="block">
+      <h3 class="highlight" id="pp9">Pocket Watches</h3>
+        <div class="row align-items-center">
+     <div class=" col-lg-5 col-md-6 col-sm-12"><img class="figure-img img-fluid objectImage" src='/images/watch.png' alt='a gold and white pocket watch'><p class="figure-caption footnote" style="width: 100%;">Pocket Watch, c. 1882. National Museum of American History.</p><a href="https://americanhistory.si.edu/collections/search/object/nmah_1203407" target="_blank"><button>Smithsonian</button></a>
+    <a  href="#topOfPage" ><button>Back to Top</button></a></div>
+  <div class="col-lg-7 col-md-6 col-sm-12">
+    <p>With the explosion in factory jobs and faster transportation, the nineteenth century marked an important moment in the need for precise timekeeping. Though they were fairly expensive, pocket watches were both a luxury and a functional necessity for many people from workers to business barons.</p>
+    <p>Like <a href="#pp2">memorandum books</a>, watches were marketed more towards men as an accessory of a mobile capitalist lifestyle. Some women did carry them in a shirtwaist pocket or on a belt, often in smaller and more decorative designs.</p>
+    <h4>The Game</h4>
+    <p>Because watches could be expensive, and were easy to pawn or sell, they could be a common target for robbers and pickpockets.</p>
+    <hr>
+        <p class="footnote">For more information, see:</p>
+    <p class="footnote">Kahan, Michael B. “Urban America.” In <em>A Companion to the Gilded Age and Progressive Era</em>, edited by Christopher M. Nichols and Nancy C. Unger. Hoboken, NJ: John Wiley & Sons, 2017.
+</p>
+       <p class="footnote">Montgomery Ward. <em>Montgomery Ward & Co. Catalogue and Buyers’ Guide 1895.</em> Skyhorse Pub., 2008.
+</p>
+  </div></div>
+</div>
+  <div class="block">
+        <p class="footnote">For more information, see:</p>
+        <p class="footnote">Blanke, David. <em>Sowing the American Dream: How Consumer Culture Took Root in the Rural Midwest.</em> Athens, OH: Ohio University Press, 2000.</p>
+        <p class="footnote">Mahoney, Timothy R. “Middle-Class Experience in the United States in the Gilded Age, 1865-1900.” <em>Journal of Urban History</em> 31, no. 3 (March 2005): 355–366.
+</p>
+        <p class="footnote">Nelson, Scott Reynolds. “A Storm of Cheap Goods: New American Commodities and the Panic of 1873.” <em>The Journal of the Gilded Age and Progressive Era</em> 10, no. 4 (2011): 447–453.
+</p>
+    <p class="footnote">Image Credits:</p>
+    <p class="footnote">Detroit Publishing Co. <em>Detroit, Mich., interior of Traub Bros. store.</em> Detroit, MI, c. 1900-1905. Photograph. <a href="https://www.loc.gov/item/2016795737/">https://www.loc.gov/item/2016795737/</a>.</p>
+        </div>
+  <img style="max-width: 100%; display: block; margin-left: auto;margin-right: auto; margin-top: 8px;"src="/images/Border%202.jpeg"></img>
+    <h2 id="crimejournal">Crime and Journalism</h2>
+      <div class="block">
+        <p><figure style="float: left; width: 20vw;" class="figure"><img class="figure-img img-fluid textImage" style="width: 20vw;" alt="Black and white photo of a white man with a beard." src="https://media.library.ohio.edu/digital/api/singleitem/image/scripps/0/default.jpg"><figcaption class="figure-caption footnote" style="width: 20vw;">James E. Scripps, c. 1900. Yale University Libraries.</figcaption></figure>Cheap daily newspapers started to appear in droves during the Gilded Age partially due to the “Detroit plan” pioneered by Detroit Eventing News founder James Scripps, who cut production costs in 1873 by printing on smaller pages with fewer columns. New waves of European immigrants, readership from newly emancipated former slaves, and increased literacy among the population in general also encouraged more frequent printing and wider circulation. The increase in manufacturing and selling of consumer goods also fed this trend, as more things to sell and media to sell them in fueled the demand for advertising space, which in turn increased the output of sensational, highly readable articles.</p>
+        <p><figure style="float: right; width: 20vw;" class="figure"><img class="figure-img img-fluid textImage" style="width: 20vw;" alt="Magazine cover with an illustration of a man at a desk." src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/A_Study_in_Scarlet_from_Beeton%27s_Christmas_Annual_1887.jpg/395px-A_Study_in_Scarlet_from_Beeton%27s_Christmas_Annual_1887.jpg?20120618200322"><figcaption class="figure-caption footnote" style="width: 20vw;">1887 cover of "Beeton's Christmas Annual," where the first Sherlock Holmes story <em>A Study in Scarlet</em> was first serialized. Ohio University Libraries.</figcaption></figure>True crime became one of the defining features of this type of journalism. Many of the great literary detectives—Sir Arthur Conan Doyle’s Sherlock Holmes, or Edgar Allan Poe’s Monsieur C. Auguste Dupin—were created in the latter half of the nineteenth century, setting the tone and formula for all forms of crime writing and reporting. These fictional criminal tales often took the style of a game, drawing in readers and presenting the situation as a low-stakes competition with thrilling secrets and twists. Readers of true crime were able to approach the story in the same way, using the gruesome details provided to try and piece together the case for themselves.</p>
+        <p>The high number of daily newspapers led to heavy competition between publications, which often drove journalism to become more dramatic and graphic. The relative peace following the end of the Civil War left a vacuum in reporting filled with mayhem and bloodshed, and to fill this demand journalists took to covering thrilling accounts taken from police sources and courtroom transcripts. Stories like these, by frequently including images, vivid details, and playing on emotions, required less analysis and mental exertion for readers than stories like politics and current events.</p>
+        <p>The section below includes some abridged examples of these kinds of articles, including many of the objects that are described above. Take note of who is described with what kinds of items and crimes, what kind of words are used to describe them, and what information may be left out. Click on the links in the text to learn more about the items mentioned, or the button below each article to be taken to its source.</p>
+        <a  href="#topOfPage" ><button>Back to Top</button></a>
+      </div><h2>Newspaper Examples</h2>
+      <div class="block">
+        <h4><em>Martinsburg Independent</em>, July 31, 1875</h4>
+        <p><img style="float: left; width: 10vw;" class="figure-img img-fluid textImage" src='/images/handkerchief.png' alt="a white lacy handkerchief">A STRANGE STORY.<br>SAD EXPERIENCE OF THE WIFE OF AN ARMY OFFICER.</p>
+        <p><img style="float: right; width: 10vw;" class="figure-img img-fluid textImage" src='/images/ring.png' alt='a diamond wedding ring'>[...] About twelve o'clock on Tuesday night a woman of about twenty-eight years of age, shabbily dressed, but of a refined and delicate appearance, was taken in to the fourth precinct station by a policeman. She there complained that an assault had been made upon her by five men on board the tugboat Mike Norton. [...] The lady who was assaulted told the police that her name was Louisa Merritt, the wife of Colonel Merritt, of the United States Army and that about three weeks ago she made her escape from a lunatic asylum near Washington city, District of Columbia, called the St. Elizabeth Asylum, but better known as the Government asylum. She had been confined there by her husband, near a year ago last September, in order to break her of the habit of eating morphine. At the time mentioned she managed to make her escape through a hole in the wall, and went to Alexandria, Virginia, on foot. From there she went to Baltimore, and thence to Philadelphia, where she remained for some days. She then sold a heavy <a href="#pp8">gold ring</a> she had in her possession and procured a few necessary articles of clothing. [...] Half a dozen old coarse cotton <a href="#pp3">handkerchiefs</a> found in her possession are marked "C. E. Waldron." [...] Besides the handkerchiefs a quanitity of morphine was found in one of her pockets, and Capt. Williams says he things she was under its influence at the time she was bro't to the station.[...]</p>
+        <a href="https://chroniclingamerica.loc.gov/lccn/sn84038206/1875-07-31/ed-1/seq-6/#words=in+her+possession"><button>Martinsburg Independent</button></a>
+        <hr>
+        <h4><em>The New York Times</em>, February 4, 1887</h4>
+    <p><img style="float: left; width: 10vw;" class="figure-img img-fluid textImage" src='/images/clipping.png' alt="a newspaper clipping describing the presidential campaign of Grover Cleveland">A STATEN ISLAND MYSTERY.<br>AN UNKNOWN AND WELL DRESSED MAN FOUND DROWNED AT CLIFTON.</p>
+    <p><img style="float: left; width: 10vw;" class="figure-img img-fluid textImage" src='/images/Calling%20Card%20Case.png' alt="a tortiseshell calling card case"><img style="float: right; width: 10vw;" class="figure-img img-fluid textImage" src='/images/MemoBook.png' alt="a small memo book with ivory pencil">The body of a man, lying partly above and partly beneath the ice at the edge of the Bay, was found at Clifton, Staten Island, yesterday morning. [...] The corpse proved to be that of a powerfully built and handsome gentleman of between 60 and 70. An aquiline nose, short, gray mustache, and light gray side whiskers combined to present a countenance of distinguished and determined appearance. [...] His pockets contained a purse with $1.05 in money and sundry memoranda and <a href=#pp7>newspaper clippings</a>. One <a href=#pp2>memorandum</a>, made on a blank card, contained some figures on one side, and on the other the name "Cornelia." The clippings were from New-York morning papers and related to the petroleum market and to a war on the gas monopoly. An <a href="#pp1">engraved card</a> was found containing the name of Howard H. Burden, with the address, Troy, N.Y., written below in lead pencil.</p>
+        <a href="https://www.nytimes.com/1887/02/04/archives/a-staten-island-mystery-an-unknown-and-well-dressed-man-found.html" target="_blank"><button>The New York Times</button></a>
+        <hr>
+        <h4><em>The Neihart Herald</em>, July 29, 1893</h4>
+        <p><img style="float: right; width: 10vw;" class="figure-img img-fluid textImage" src='/images/watch.png' alt='a gold and white pocket watch'>STATE NEWS.</p>
+        <p><img style="float: left; width: 10vw;" class="figure-img img-fluid textImage" src='/images/knife.png' alt="a folding pocket knife">[...]This afternoon as two little boys were out fishing they ran across the body of a man that had committed suicide a week or ten days ago, [...] A 38-calibre <a href="#pp4">revolver</a> lay at his right side, [...] Eight dollars in silver, a <a href="#pp5">knife</a> and a gold <a href="#pp9">watch</a> were found on his person. The coroner buried the remains where they were found.</p>
+        <a href="https://chroniclingamerica.loc.gov/lccn/sn85053323/1893-07-29/ed-1/seq-1/#words=on+his+person"><button>The Neihart Herald</button></a>
+      </div>
+      <div class="block">
+        <p class="footnote">For more information, see:</p>
+        <p class="footnote">Dryer, Trevor D. “‘All the News That’s Fit to Print’: The New York Times, ‘Yellow’ Journalism, and the Criminal Trial 1892-1902.” <em>Nevada Law Journal</em> 8, no. 2 (2007): 541-570.
+</p>
+        <p class="footnote">Frisken, Amanda. <em>Graphic News: How Sensational Images Transformed Nineteenth-Century Journalism.</em> Urbana: University of Illinois Press, 2020.
+</p>
+        <p class="footnote">Kaestle, Carl F., and Janice A. Radway. <em>A History of the Book in America: Volume 4: Print in Motion: The Expansion of Publishing and Reading in the United States, 1880-1940.</em> Chapel Hill: University of North Carolina Press, 2009.
+</p>
+        <p class= "footnote">Stevens, John D. <em>Sensationalism and the New York Press.</em> New York: Columbia University Press, 1991.
+</p>
+<p class="footnote">Thoms, Peter. <em>Detection & Its Designs: Narrative & Power in 19th-Century Detective Fiction.</em> Athens: Ohio University Press, 1998.</p>
+        <p class="footnote">Image Credits:</p>
+      <p class="footnote">Doyle, Sir Arthur Conan. “A Study in Scarlet.” <em>Beeton’s Christmas Annual</em>, 1887.<a href="https://media.library.ohio.edu/digital/collection/scripps/id/0/">https://media.library.ohio.edu/digital/collection/scripps/id/0/.</a></p>
+        <p class="footnote"><em>James E. Scripps, Brother of E.W. Scripps.</em> Photograph, c 1900. E.W. Scripps Papers, Mahn Center for Archives & Special Collections, Ohio University Libraries.
+ <a href="https://collections.library.yale.edu/catalog/2013860">https://collections.library.yale.edu/catalog/2013860</a>.</p>
+      </div>
+  <img style="max-width: 100%; display: block; margin-left: auto;margin-right: auto; margin-top: 8px;"src="/images/Border%202.jpeg"></img>
+      <h2 id="immragen">Immigration, Race, and Gender</h2>
+      <div class="block">
+        <p><figure style="float: right; width: 35vw;" class="figure"><img class="figure-img img-fluid textImage" style="width: 35vw;" alt="Black and white photo of women sitting and lying on the floor around an old fashioned stove." src="https://s3.amazonaws.com/icptmsdata/r/i/i/s/riis_jacob_260_1982_446386_displaysize.jpg"><figcaption class="figure-caption footnote" style="width: 35vw;">Immigrant women housed in a New York police station, 1892. International Center of Photography.</figcaption></figure>The Gilded Age marked a period of significant changes, especially for new immigrants from Europe, African Americans, and women. The number of European-born people living in the United States jumped from almost five million to almost nine million between 1870 and 1900. Most flocked to urban, industrialized centers where they took low-wage manufacturing or manual labor jobs. People of different origins were perceived differently by American-born people. Groups like Italians and Irish were generally considered impoverished, violent, and suspiciously Catholic, while groups like Germans, who had been in America longer and were more likely to be skilled craftsmen, had better reputations.</p>
+        <p>By the 1870s slavery was less than a decade in the past, and the Constitution had recently gained its Thirteenth, Fourteenth, and Fifteenth Amendments granting new freedoms to African Americans. While several thousand Black men entered leadership positions in government during Reconstruction, and the Freedmen’s Bureau helped formerly enslaved people gain access to new opportunities, much of this progress was undone after Reconstruction ended in 1877, and by 1900 upwards of 90% of African Americans were doing much of the same agricultural work for many of the same employers who had once been enslavers.</p>
+        <p><figure style="float: left; width: 35vw;" class="figure"><img class="figure-img img-fluid textImage" style="width: 35vw;" alt="Black and white photo of eight women wearing dresses with large skirts." src="https://digitallibrary.vassar.edu/islandora/object/vassar%3A10402/datastream/MEDIUM_SIZE/view"><figcaption class="figure-caption footnote" style="width: 35vw;">Group of eight Vassar College students, 1878. Vassar College Libraries.</figcaption></figure>Women were increasingly able to experience life outside the home, and the number of employed women jumped from nearly 1.8 million in 1870 to almost 5.2 million in 1900. However, like today, the female experience was not universal and intersected with other factors like race, class, and national origin. By 1900 around 43% of African American women, 19% of foreign-born women, and 25% of first-generation women over the age of sixteen were in the workforce, compared to 15% of white women with American-born parents. White American and European women were often portrayed in media as vulnerable, pretty, and domestic, while Black women were more likely to be shown without this attractive fragility, acting on their own in a distinctly "unfeminine" way.</p>
+        <p>Other immigrant groups and racial minorities did not appear as frequently in Gilded Age media, likely because they made up less than 1% of the population by 1900. However, in their infrequent appearances they seem to occupy a similar spectrum of acceptance to mistrust as European immigrants did, ranging from a sinister perception of Chinese workers to a more welcoming but mysterious view of wealthy Latin American merchants.</p>
+        <a  href="#topOfPage" ><button>Back to Top</button></a>
+        <hr>
+        <p class="footnote">For more information, see:</p>
+        <p class="footnote">Carter, Susan B., Scott Sigmund Gartner, Michael R. Haines, Alan L. Olmstead, Richard Sutch, and Gavin Wright. <em>Historical Statistics of the United States Millennial Edition Online.</em> New York: Cambridge University Press, 2006. <a href="http://hsus.cambridge.org/">http://hsus.cambridge.org/</a>.
+</p>
+        <p class="footnote">Dinnerstein, Leonard, Roger L. Nichols, and David M. Reimers. <em>Natives and Strangers: A Multicultural History of Americans.</em> New York: Oxford University Press, 2003.</p>
+        <p class="footnote">Friedman, Lawrence Meir. <em>Crime and Punishment in American History.</em> New York: Basic books, 1993.
+</p>
+        <p class="footnote">Gates, Henry Louis, Jr. <em>Stony the Road: Reconstruction, White Supremacy, and the Rise of Jim Crow.</em> New York: Penguin Publishing Group, 2019.
+</p>
+        <p class="footnote">Gibson, Campbell, and Emily Lennon. <em>Historical Census Statistics on the Foreign-Born Population of the United States: 1850-1990.</em> Working Paper. Washington, DC: U.S. Bureau of the Census, February 1999. <a href="https://www.census.gov/history/pdf/1910foreignbornpop.pdf">https://www.census.gov/history/pdf/1910foreignbornpop.pdf.</a>
+</p>
+        <p class="footnote">Strauss, Oscar S. <em>Statistics of Women at Work Based on Unpublished Information Derived from the Schedules of the Twelfth Census: 1900.</em> Washington, DC: Department of Commerce and Labor Bureau of the Census, 1907. <a href="https://www.census.gov/library/publications/1907/dec/women-at-work.html">https://www.census.gov/library/publications/1907/dec/women-at-work.html.</a>
+</p>
+        <p class="footnote">Image Credits:</p>
+        <p class="footnote"><em>Group of Eight Vassar College Students.</em> Photograph, c 1878. Vassar College Digital Library. <a href="https://digitallibrary.vassar.edu/islandora/object/vassar%3A10402">https://digitallibrary.vassar.edu/islandora/object/vassar%3A10402</a>.
+</p>
+        <p class="footnote">Riis, Jacob. <em>Police Station Lodgings - Women. W. 47 St.</em> Photograph, January 31, 1892. International Center of Phtography.<a href="https://www.icp.org/browse/archive/objects/police-station-lodgings-women-w-47-st.">https://www.icp.org/browse/archive/objects/police-station-lodgings-women-w-47-st.</a></p>
+      </div>
+    </div>
+    </div>
+</div>
+<!--Opener Modal-->
+<form class="modal multi-step" id="demo-modal-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title step-1" data-step="1">Step 1</h4>
+                <h4 class="modal-title step-2" data-step="2">Step 2</h4>
+                <h4 class="modal-title step-3" data-step="3">Step 3</h4>
+                <h4 class="modal-title step-4" data-step="4">Results</h4>
+            </div>
+            <div class="modal-body step step-1">
+               <div class="formgroup">Name:
+        <p><input placeholder="First name" name="fname" id="fname"></p>
+        <p><input placeholder="Last name" name="lname" id="lname"></p>
+        </div><div class="formgroup">Gender:
+        <p><input type="radio" id="male" name="gender" value="man"><label for="male">Male</label></p>
+        <p><input type="radio" id="female" name="gender" value="woman"><label for="female">Female</label></p>
+        <p><input type="radio" id="other" name="gender" value="person"><label for="other">Other</label></p>
+      </div>
+            </div>
+            <div class="modal-body step step-2">
+                <div class="formgroup">Race/Ethnicity:
+        <p><input type="radio" id="black" name="race" value="Black"><label for="black">African American</label></p>
+        <p><input type="radio" id="immigrant" name="race" value="immigrant"><label for="immigrant">European Immigrant</label></p>
+        <p><input type="radio" id="white" name="race" value="white"><label for="white">American-born White</label></p>
+        </div><div class="formgroup">Class:
+        <p><input type="radio" id="rich" name="class2" value="wealthy"><label for="rich">Wealthy</label></p>
+        <p><input type="radio" id="mc" name="class2" value="middle class"><label for="mc">Middle Class</label></p>
+        <p><input type="radio" id="wc" name="class2" value="working class"><label for="wc">Working Class</label></p>
+      </div>
+            </div>
+            <div class="modal-body step step-3">
+                <div class="formgroup">I live in an area that is:
+        <p><input type="radio" id="urban" name="locale" value="an urban"
+        oninput="this.className = ''"><label for="urban">Urban</label></p>
+        <p><input type="radio" id="rural" name="locale" value="a rural"
+        oninput="this.className = ''"><label for="rural">Rural</label></p>
+      </div>
+            </div>
+            <div class="modal-body step step-4">
+                <div id="result"></div>
+                Is this correct?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class=" step-4" data-dismiss="modal">Close</button>
+                <button type="button" class=" step step-1" data-step="1" onclick="sendEvent('#demo-modal-1', 2)">Continue</button>
+                <button type="button" class=" step step-2" data-step="2" onclick="sendEvent('#demo-modal-1', 3)">Continue</button>
+                <button type="button" class=" step step-3" data-step="3" onclick="formHandler();sendEvent('#demo-modal-1', 4)" >Submit</button>
+                <button type="button" class=" step step-4" data-step="4" onclick="sendEvent('#demo-modal-1', 1)">Restart</button>
+                <a href="#topOfPage"><button type="button" class=" step step-4" data-step="4" data-dismiss="modal" onclick="startPlay()" >Play the Game</button></a>
+            </div>
+        </div>
+    </div>
+</form>
+<script src="multi-step-modal.js"></script>
+<script>
+sendEvent = function(sel, step) {
+    var sel_event = new CustomEvent('next.m.' + step, {detail: {step: step}});
+    window.dispatchEvent(sel_event);
+}
+</script>
+  <!--Rest of the page-->
+    <!-- Optional JavaScript -->
+    <script src="Things.js"></script>
+    <script src="Character.js"></script>
+    <script src="Gameplay.js"></script>
+    <script src="Locations.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </div>
+      <!-- Footer -->
+  <div class="border"></div>
+<div class="navbar container-fluid" style="background:var(--sec-bg); z-index: 1;">
+    <div class="row">
+      <div class="col align-bottom">
+    <p style="font-size:15px; margin:5px 0px; color: var(--sec-ft);">Copyright ©<script>document.write(new Date().getFullYear());</script> Danielle Cox</p>
+    <p class="justify-text-center" style="font-size:10px; color:#F2EDD5">I coded this website myself from scratch, so please be patient with any bugs.</p>
+      </div>
+</div>
+      <!--ADD SOCIAL MEDIA BUTTONS-->
+      <div class="row" style="margin:10px 0px">
+        
+	<a target="_blank" href="http://www.facebook.com/share.php?u=XXX">
+	<img title="Facebook" alt="Facebook" src="https://socialmediawidgets.files.wordpress.com/2014/03/02_facebook.png" width="35" height="35">
+	</a>
+	<a target="_blank" href="https://twitter.com/intent/tweet?text=Dani%20did%20a%20great%20job%20on%20her%20thesis,%20check%20it%20out%20https%3A//Gilding-the-Evidence.daniellecox.repl.co%20%40DanielleARCox">
+<img title="Twitter" alt="Twitter" src="https://socialmediawidgets.files.wordpress.com/2014/03/01_twitter.png" width="35" height="35" />
+</a>
+	<a target="_blank" href="https://www.linkedin.com/in/danielle-cox-499a84106">
+	<img title="LinkedIn" alt="LinkedIn" src="https://socialmediawidgets.files.wordpress.com/2014/03/07_linkedin.png" width="35" height="35">
+	</a>
+	
+  <a href="mailto:coxda@g.cofc.edu">
+	<img title="email" alt="Email" src="http://icons.iconarchive.com/icons/graphicloads/100-flat-2/128/email-icon.png" width="35" height="35">
+	</a>
+	</div>
+  </div>
+  </body>
+</html>
