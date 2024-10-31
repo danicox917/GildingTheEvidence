@@ -166,10 +166,10 @@ function atHome(){
     finalScore = "You got all of your things! Well done!<img class='cartoon'src='"+goal.sprite+"'></img>";
   }
   else if (tally > 0){
-    finalScore = "You very nearly got everything, so close.<img class='cartoon'src='/images/fall.png'></img>";
+    finalScore = "You very nearly got everything, so close.<img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/fall.png'></img>";
   }
   else {
-    finalScore = "You didn't manage to get one single thing on your list. Bad luck.<img class='cartoon'src='/images/sadShopkeeper.png'></img>"
+    finalScore = "You didn't manage to get one single thing on your list. Bad luck.<img class='cartoon'src='https://raw.githubusercontent.com/danicox917/GildingTheEvidence/refs/heads/main/images/sadShopkeeper.png'></img>"
   }
 
 let bonus = "";
